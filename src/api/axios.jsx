@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://127.0.0.1:8000/api/",
+  // baseURL: "http://127.0.0.1:8000/api/",
+  baseURL: "https://umikz-ecommerce-backend.onrender.com/api/"
 });
 
 // Request Interceptor - Attach access token
@@ -42,8 +43,8 @@ api.interceptors.response.use(
 
         // Try to refresh the token
         const response = await axios.post(
-          "http://127.0.0.1:8000/api/token/refresh/",
-          { refresh: refreshToken }
+        `${api.defaults.baseURL}token/refresh/`,
+        { refresh: refreshToken }
         );
 
         const newAccessToken = response.data.access;

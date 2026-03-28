@@ -16,9 +16,9 @@ export const ProductsProvider = ({ children }) => {
       try {
         const [prodRes, catRes] = await Promise.all([
           // // axios.get("http://localhost:5000/products"),
-          axios.get("http://127.0.0.1:8000/api/products/"),
+          axios.get("https://umikz-ecommerce-backend.onrender.com/api/products/"),
 
-          axios.get("http://127.0.0.1:8000/api/categories/"),
+          axios.get("https://umikz-ecommerce-backend.onrender.com/api/categories/"),
           // api.get("products/"),
           // api.get("categories/"),
         ]);

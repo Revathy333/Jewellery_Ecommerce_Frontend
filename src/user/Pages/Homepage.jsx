@@ -35,12 +35,12 @@ const Home = () => {
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/products/")
+      .get("https://umikz-ecommerce-backend.onrender.com/api/products/")
       .then((res) => setProducts(res.data))
       .catch((err) => console.error(err));
 
     axios
-      .get("http://127.0.0.1:8000/api/categories/")
+      .get("https://umikz-ecommerce-backend.onrender.com/api/categories/")
       .then((res) => setCategories(res.data))
       .catch((err) => console.error(err));
   }, []);
